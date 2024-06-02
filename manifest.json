@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "VLR Calendar",
+    "version": "1.0",
+    "description": "Date import to Google Calendar from vlr.gg",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+      "activeTab"
+    ],
+    "content_scripts": [
+      {
+        "matches": [
+          "*://*.vlr.gg/event/matches/*",
+          "*://*.vlr.gg/matches"
+        ],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "16":  "images/vlr16x16.png",
+      "48":  "images/vlr48x48.png",
+      "128": "images/vlr128x128.png"
+    }
+  }
+  
